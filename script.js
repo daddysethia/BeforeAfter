@@ -5,7 +5,7 @@ const checkBtn = document.getElementById('check');
 const message = document.getElementById('message');
 
 // Generate a random number between 1 and 100 for the center box
-let randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber = Math.floor(Math.random() * 10) + 1;
 numberBox.innerText = randomNumber;
 
 function checkGuesses() {
@@ -14,7 +14,7 @@ function checkGuesses() {
 
   if (guess1Value === randomNumber - 1 && guess2Value === randomNumber + 1) {
     // If both guesses are correct, show a success message and generate a new random number
-    numberBox.innerText = Math.floor(Math.random() * 100) + 1;
+    numberBox.innerText = Math.floor(Math.random() * 10) + 1;
     guess1.value = "";
     guess2.value = "";
     checkBtn.classList.remove("wrong");
